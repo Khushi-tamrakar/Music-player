@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up</title>
+    <link rel="stylesheet" href="signup.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background: linear-gradient(rgba(255, 217, 0, 0.705), rgb(12, 10, 10));
+        }
+
+        .signup-form {
+            width: 100%;
+            max-width: 400px;
+            padding: 20px;
+            background: linear-gradient(rgba(255, 217, 0, 0.705), rgb(12, 10, 10));
+            border-radius: 8px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+        }
+
+        .signup-form h2 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-group label {
+            display: block;
+            font-weight: bold;
+        }
+
+        .form-group input {
+            width: calc(100% - 22px); /* Adjusted width */
+            padding: 10px;
+            border: 1px solid rgb(234, 234, 34);
+            border-radius: 5px;
+        }
+
+        button[type="submit"] {
+            width: 100%;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            background: linear-gradient(rgb(176, 176, 66), rgb(19, 16, 16));
+            color: #fff;
+            cursor: pointer;
+        }
+
+        button[type="submit"]:hover {
+            background-color: #0056b3;
+        }
+
+        .error-message {
+            color: red;
+            text-align: center;
+            margin-top: 10px;
+        }
+     .bts #accountCreate{
+        width: 100%;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            background: linear-gradient(rgba(244, 244, 33, 0.848), rgb(74, 72, 72));
+            color: #070707;
+            cursor: pointer;
+            font-size: 22px;
+     }
+
+    </style>
+</head>
+<body>
+<div class="signup-form">
+    <h2>Signup</h2>
+    <form id="signupForm" onsubmit="return validateForm()">
+        <div class="form-group">
+            <label for="username">Username</label>
+            <input type="text" id="username" name="username" placeholder="Enter your username" required>
+        </div>
+        <div class="form-group">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" placeholder="Enter your Email" required>
+        </div>
+        <div class="form-group">
+            <label for="password">Password</label>
+            <input type="password" id="password" name="password" placeholder="Enter your Password" required>
+        </div>
+        <div class="form-group">
+            <label for="confirmPassword">Confirm Password</label>
+            <input type="password" id="confirmPassword" name="confirmPassword" placeholder="Enter your Confirm Password" required>
+        </div>
+        <div class="bts">
+        <button type="button" id="accountCreate">Create an Account</button>
+    </div>
+    </form>
+    <div id="errorMessage" class="error-message"></div>
+</div>
+<script>
+    function validateForm() {
+        var username = document.getElementById("username").value.trim();
+        var email = document.getElementById("email").value.trim();
+        var password = document.getElementById("password").value;
+        var confirmPassword = document.getElementById("confirmPassword").value;
+
+        var errorMessage = "";
+
+        // Check if any field is empty
+        if (username === "" || email === "" || password === "" || confirmPassword === "") {
+            errorMessage += "All fields are required.\n";
+        }
+
+        // Username validation
+        if (username === "") {
+            errorMessage += "Username is required.\n";
+        }
+
+        // Email validation
+        if (email === "") {
+            errorMessage += "Email is required.\n";
+        } else if (!isValidEmail(email)) {
+            errorMessage += "Invalid email address.\n";
+        }
+
+        // Password validation
+        if (password === "") {
+            errorMessage += "Password is required.\n";
+        } else if (password.length < 6) {
+            errorMessage += "Password must be at least 6 characters.\n";
+        }
+
+        // Confirm password validation
+        if (confirmPassword === "") {
+            errorMessage += "Please confirm your password.\n";
+        } else if (password !== confirmPassword) {
+            errorMessage += "Passwords do not match.\n";
+        }
+
+        // Display error message if any
+        if (errorMessage !== "") {
+            alert(errorMessage); // Show alert instead of displaying error message
+            return false;
+        }
+
+        // Prevent multiple submissions
+        document.getElementById("accountCreate").disabled = true;
+
+        return true;
+    }
+
+    function isValidEmail(email) {
+        // Very basic email validation regex
+        var emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        return emailRegex.test(email);
+    }
+
+    // Change id from 'acoountcreate' to 'accountCreate'
+    var create = document.getElementById('accountCreate');
+    create.addEventListener("click", function () {
+        if(validateForm()) {
+            window.location.href = "player.html";
+        }
+    });
+</script>
+
+</body>
+</html>

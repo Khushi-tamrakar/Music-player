@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RhythmWave Log In Page</title>
+    <link rel="stylesheet" href="player1.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+<header>
+    <div class="logo">
+        <a href="player1.html">
+            <img src="images/secondp1.1.png" alt="">
+        </a>
+    </div>
+</header>
+
+<section>
+    <div class="main">
+        <h1>RhythmWave</h1>
+        <div class="account-connect">
+            <button class="a-c-btn" onclick="showEmailLoginForm()">
+                <i class="fa-solid fa-envelope"></i>
+                Continue with mail
+            </button><br>
+            <button class="a-c-btn" onclick="showPhoneNumberForm()">
+                <i class="fa-solid fa-phone"></i>
+                Continue with number
+            </button><br>
+        </div>
+        <hr>
+        <div class="Log-in">
+            <form action="#" id="loginForm" style="display:none;">
+                <div class="login">
+                    <label for="email"></label>
+                    <input type="email" id="email" placeholder="Enter your mail ID">
+                </div>
+                <br>
+                <div class="pass">
+                    <label for="password"></label>
+                    <input type="password" id="password" placeholder="Enter your password">
+                </div>
+            </form>
+            <br>
+            <button id="loginBtn" onclick="validateLogin()">Log In</button>
+        </div>
+
+        <div class="login-signup">
+            <span class="text"> Not a member!
+                <a href="#" id="signup" class="text signup-text" onclick="signup()">Signup now</a>
+            </span>
+        </div>
+    </div>
+</section>
+<script src="player1.js"></script>
+</body>
+</html>

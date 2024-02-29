@@ -1,0 +1,140 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300&family=Nunito:ital,wght@0,200;0,300;0,400;0,800;1,300;1,500&family=Open+Sans:wght@500&family=Roboto+Slab:wght@300&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;1,300&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Verdana', Geneva, Tahoma, sans-serif;
+    color: rgb(26, 26, 26);
+}
+
+.box-1 {
+    background: linear-gradient(rgba(255, 217, 0, 0.705), rgb(12, 10, 10));
+    flex-direction: column;
+    width: 350px;
+    height: 450px;
+    border-radius: 10px;
+    /* background: linear-gradient(rgba(255, 217, 0, 0.705), rgb(12, 10, 10)); */
+}
+
+.center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+body {
+    background: linear-gradient(rgba(255, 217, 0, 0.705), rgb(12, 10, 10));
+}
+
+.art img {
+    width: 100px;
+    height: 100px;
+    margin-bottom: 20px;
+    border-radius: 50%; /* Making the image circular */
+    border: 5px solid rgba(190, 190, 56, 0.734)
+}
+
+.box {
+    height: 100vh;
+    flex-direction: column;
+}
+
+.art-name {
+    text-align: center;
+    overflow: hidden;
+    width: 170px;
+}
+
+.box-1 h4 {
+    margin-bottom: 35px;
+}
+
+.art-name p {
+    white-space: nowrap;
+    font-family: cursive;
+    font-weight: bold;
+}
+
+.round {
+    animation: round 4s linear infinite;
+}
+
+@keyframes round {
+    0% {
+        transform: rotateZ('0deg');
+    }
+    100% {
+        transform: rotateZ('360deg');
+    }
+}
+
+.run {
+    animation: run 6s linear infinite;
+}
+
+@keyframes run {
+    0% {
+        transform: translateX(100%);
+    }
+    100% {
+        transform: translateX(-100%);
+    }
+}
+
+.ctrl {
+    cursor: pointer;
+    background-color: rgba(202, 202, 64, 0.905);
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    margin: 0 15px;
+}
+
+.ctrl:active {
+    transform: scale(0.9);
+}
+
+i {
+    font-size: 22px;
+}
+
+.none {
+    display: none;
+}
+
+.msc {
+    margin-top: 30px;
+}
+
+.prog {
+    margin-top: 15px;
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+}
+
+#Progress {
+    -webkit-appearance: none;
+    width: 90%;
+    height: 6px;
+    background-color: rgb(203, 203, 33);
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+#Progress::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    background: rgb(179, 179, 65);
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    border: 8px solid #fff;
+}
+
+.time {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 10px;
+}

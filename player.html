@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>mp-3 player</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="secondp.css">
+</head>
+<body>
+<div class="box center">
+  <div  class="box-1 center" >
+    <h4 id="name">Tulsi Kumar</h4>
+    <div class="art">
+        <img class="center" id="artist" src="images/secondp.png" alt="Artist Image">
+    </div>
+    <div class="art-name">
+      <p class="title">Ram Ayenge</p>
+    </div>
+    <div class="prog">
+      <div class="time">
+        <div class="start">
+          <p id="start">0:00</p>
+        </div>
+        <div class="end">
+          <p id="end"></p>
+        </div>
+        
+      </div>
+      <input type="range" value="0" id="Progress" onchange="seek(event)">
+    </div>
+
+    <div class="msc center">
+      <div class="ctrl center" onclick="backward()">
+        <i class="fa-solid fa-backward"></i>
+      </div>
+      <div class="ctrl center" id="playsong" onclick="togglePlay()">
+        <i class="fa-solid" id="playIcon"></i>
+    </div>
+      <div class="ctrl center" onclick="forward()">
+        <i class="fa-solid fa-forward"></i>
+      </div>
+      <!-- song is playing but because of copyright you can't listen it -->
+      <audio src="Ram-Aayenge(PaglaSongs).mp3" class="song" id="audioPlayer"></audio>
+    </div>
+  </div>
+</div>
+<script src="player.js"></script>
+</body>
+</html>

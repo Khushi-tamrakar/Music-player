@@ -1,0 +1,149 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300&family=Nunito:ital,wght@0,200;0,300;0,400;0,800;1,300;1,500&family=Open+Sans:wght@500&family=Protest+Revolution&family=Roboto+Slab:wght@300&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;1,300&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+}
+
+header {
+    background-color: black;
+    padding: 0px 0px  0px;
+}
+
+header .logo img {
+    width: 170px;
+}
+
+section {
+    background: linear-gradient(rgba(255, 217, 0, 0.705), rgb(12, 10, 10));
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+section div.main {
+    margin: 32px;
+    padding: 32px;
+    width: 734px; /* Adjust width as needed */
+    height: 910;
+    background: rgb(21, 19, 19);
+    border-radius: 40px;
+    text-align: center;
+}
+
+section div.main h1 {
+    /* background: linear-gradient(rgba(255, 231, 97, 0.705), rgb(12, 10, 10));
+    font-size: 32px;
+    margin-bottom: 24px; */
+    text-align: center;
+    margin: 48px 0;
+    color: rgb(238, 228, 35);
+    font-size: 48px;
+   
+    
+}
+section div.main.account-connect {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+section .main.account-connect button {
+    width: 324px;
+    margin-bottom: 16px;
+    padding: 12px 24px;
+    border: none;
+    border-radius: 25px;
+    color: rgb(251, 243, 243);
+    background: linear-gradient(rgba(185, 185, 33, 0.848), rgb(26, 18, 18));
+    font-size: 16px;
+}
+
+section div.main.account-connect button i {
+    margin-right: 8px;
+    font-size: 12px;
+}
+
+section div.main hr {
+    margin: 32px 100px;
+    border-right: none;
+    border-bottom: none;
+    border-left: none;
+    border-image: initial;
+    border-top: 1px solid rgb(41,41,41);
+}
+
+section div.main .login,
+section div.main .pass {
+    margin-bottom: 16px;
+}
+
+section div.main .login input,
+section div.main .pass input {
+    width: calc(100% - 48px);
+    padding: 12px 24px;
+    border: 2px solid rgb(234, 237, 62);
+    border-radius: 25px;
+    font-size: 20px;
+    display: flex;
+    justify-content: center;
+}
+
+#loginBtn {
+    width: 200px;
+    padding: 12px;
+    border: none;
+    border-radius: 0px;
+    color: rgb(12, 11, 11);
+    background: linear-gradient(rgba(244, 244, 33, 0.848), rgb(74, 72, 72));
+    font-size: 16px;
+}
+
+.login-signup {
+    margin-top: 24px;
+    color: rgb(223, 223, 119);
+}
+section .main .account-connect .a-c-btn{
+    width: 324px;
+    text-align: center;
+    padding: 10px 20px;
+    border: none;
+    outline: none;
+    margin: 5px 0;
+    border-radius: 500px;
+    color: rgb(200, 192, 31);
+    background: transparent;
+    border: 1px solid rgb(218, 224, 41);
+    font-size: 15px;
+    font-weight: bold;
+}
+.Log-in #loginForm .login input{
+    font-size: 20px;
+    text-align: center;
+    padding: 10px 20px;
+    width: 324px;
+    margin-left: 185px;
+    padding-top: 10;
+    color:black;
+    justify-content: space-around;
+    border-radius: 0px;
+}
+.Log-in #loginForm .pass input{
+    font-size: 20px;
+    text-align: center;
+    padding: 10px 20px;
+    width: 324px;
+    margin-left: 185px;
+    color:black;
+    padding-top: 10px;
+    justify-content: space-around;
+    border-radius: 0;
+} 
+a{
+    color: rgb(193, 193, 76);
+}
+
